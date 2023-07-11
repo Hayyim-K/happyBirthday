@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="ViewController" customModule="happyBirthday" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bodyImage" translatesAutoresizingMaskIntoConstraints="NO" id="32S-Xk-ghn">
+                                <rect key="frame" x="0.0" y="476" width="393" height="376"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="headTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ifR-35-doa">
+                                <rect key="frame" x="16" y="305.66666666666669" width="361" height="177"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="unactiveEarsHQ"/>
+                                <state key="selected" image="activeEarsHQ"/>
+                                <state key="highlighted" image="unactiveEarsUpped"/>
+                                <connections>
+                                    <segue destination="ALD-9N-mhW" kind="show" id="2h3-tv-cj7"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face35" translatesAutoresizingMaskIntoConstraints="NO" id="JhV-Kq-pXU">
+                                <rect key="frame" x="112" y="285.66666666666669" width="169" height="281.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JhV-Kq-pXU" secondAttribute="height" multiplier="169:281" id="Wpk-OS-lHL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="90"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hat" translatesAutoresizingMaskIntoConstraints="NO" id="9dd-xP-5pY">
+                                <rect key="frame" x="-29" y="82.999999999999986" width="451" height="252.66666666666663"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJc-26-JLR">
+                                <rect key="frame" x="16" y="67" width="361" height="190"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">PULL IT UP
+35
+TIMES!!</string>
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.0" green="1" blue="1" alpha="0.60642591059602646" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="NSColor" red="0.0" green="0.051177963712695007" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="30" name="Menlo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="3" height="2"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="JhV-Kq-pXU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ERc-iD-p3H"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wJc-26-JLR" secondAttribute="trailing" constant="16" id="EaZ-cz-gIf"/>
+                            <constraint firstItem="JhV-Kq-pXU" firstAttribute="top" secondItem="9dd-xP-5pY" secondAttribute="bottom" constant="-50" id="Mrp-QP-L8m"/>
+                            <constraint firstItem="9dd-xP-5pY" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Qg7-EM-h9c"/>
+                            <constraint firstItem="ifR-35-doa" firstAttribute="height" secondItem="JhV-Kq-pXU" secondAttribute="height" multiplier="0.629893" id="Y3C-DY-wOf"/>
+                            <constraint firstItem="wJc-26-JLR" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.223005" id="YR6-ZN-7xG"/>
+                            <constraint firstItem="ifR-35-doa" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="16" id="ZCy-gI-D6j"/>
+                            <constraint firstItem="ifR-35-doa" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="aML-24-SJA"/>
+                            <constraint firstAttribute="trailing" secondItem="ifR-35-doa" secondAttribute="trailing" constant="16" id="arI-mj-Z1r"/>
+                            <constraint firstItem="JhV-Kq-pXU" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="cdq-sk-HmB"/>
+                            <constraint firstItem="32S-Xk-ghn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fnz-7w-EzW"/>
+                            <constraint firstItem="32S-Xk-ghn" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="gCh-Tk-JeF"/>
+                            <constraint firstItem="wJc-26-JLR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="iaJ-M5-jWf"/>
+                            <constraint firstItem="ifR-35-doa" firstAttribute="top" secondItem="JhV-Kq-pXU" secondAttribute="top" constant="20" id="mEX-gY-xYY"/>
+                            <constraint firstItem="9dd-xP-5pY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="r5x-9y-DzP"/>
+                            <constraint firstItem="wJc-26-JLR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="rcK-iS-zq9"/>
+                            <constraint firstItem="32S-Xk-ghn" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.441315" id="sqY-dB-y1r"/>
+                            <constraint firstAttribute="bottom" secondItem="32S-Xk-ghn" secondAttribute="bottom" id="su5-FP-DHE"/>
+                            <constraint firstItem="JhV-Kq-pXU" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.430025" id="vcg-rY-PnK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lYn-84-yex">
+            <objects>
+                <viewController id="ALD-9N-mhW" customClass="ViewController" customModule="happyBirthday" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uo5-Ww-eUi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hat" translatesAutoresizingMaskIntoConstraints="NO" id="KSZ-V8-nzv">
+                                <rect key="frame" x="96.666666666666686" y="221" width="200" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="7Bl-zV-lcz"/>
+                                    <constraint firstAttribute="width" constant="200" id="7qD-6v-LiQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHe-fq-3Qb">
+                                <rect key="frame" x="59.666666666666657" y="402.66666666666669" width="274" height="37"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="HAPPY BIRTHDAY!">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="30" name="Menlo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="3" height="2"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="finalRedEars" translatesAutoresizingMaskIntoConstraints="NO" id="Zt1-mS-H5x">
+                                <rect key="frame" x="37" y="511.66666666666669" width="319" height="180.33333333333331"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tU1-GR-ydd"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="Zt1-mS-H5x" firstAttribute="leading" secondItem="tU1-GR-ydd" secondAttribute="leading" constant="37" id="9ve-ts-rbe"/>
+                            <constraint firstItem="KSZ-V8-nzv" firstAttribute="centerY" secondItem="uo5-Ww-eUi" secondAttribute="centerY" id="AWa-Ls-k67"/>
+                            <constraint firstItem="KSZ-V8-nzv" firstAttribute="centerX" secondItem="uo5-Ww-eUi" secondAttribute="centerX" id="MdN-Y8-ES8"/>
+                            <constraint firstItem="ZHe-fq-3Qb" firstAttribute="centerY" secondItem="uo5-Ww-eUi" secondAttribute="centerY" id="V2u-Aw-CkE"/>
+                            <constraint firstAttribute="bottom" secondItem="Zt1-mS-H5x" secondAttribute="bottom" constant="150" id="VQn-vZ-Oy6"/>
+                            <constraint firstItem="tU1-GR-ydd" firstAttribute="trailing" secondItem="Zt1-mS-H5x" secondAttribute="trailing" constant="37" id="VT1-I2-aYN"/>
+                            <constraint firstItem="Zt1-mS-H5x" firstAttribute="top" secondItem="ZHe-fq-3Qb" secondAttribute="bottom" constant="72.329999999999998" id="r8X-Ec-u5a"/>
+                            <constraint firstItem="ZHe-fq-3Qb" firstAttribute="centerX" secondItem="uo5-Ww-eUi" secondAttribute="centerX" id="yoU-6R-XR0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PU2-VK-nRq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wKK-nx-Ddb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893.89312977099235" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="activeEarsHQ" width="1658" height="750"/>
+        <image name="bodyImage" width="913" height="1094"/>
+        <image name="face35" width="1222" height="2037"/>
+        <image name="finalRedEars" width="1658" height="711"/>
+        <image name="hat" width="451" height="898"/>
+        <image name="unactiveEarsHQ" width="1658" height="750"/>
+        <image name="unactiveEarsUpped" width="1658" height="750"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
