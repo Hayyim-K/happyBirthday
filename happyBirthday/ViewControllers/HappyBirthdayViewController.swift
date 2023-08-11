@@ -1,21 +1,23 @@
 //
-//  PullUpViewController.swift
+//  HappyBirthdayViewController.swift
 //  happyBirthday
 //
-//  Created by vitasiy on 13/07/2023.
+//  Created by vitasiy on 14/07/2023.
 //
 
 import UIKit
 
-class PullUpViewController: UIViewController {
-    @IBOutlet weak var infoLabel: UILabel!
+class HappyBirthdayViewController: UIViewController {
+
+    @IBOutlet weak var finalLabel: UILabel!
+    @IBOutlet weak var resultLable: UILabel!
     
     var friend: BirthdayBoy!
-     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        infoLabel.text = "PULL IT UP\n\(friend.age)\nTIMES!!"
+        finalLabel.text = "HAPPY BIRTHDAY\nDEAR\n\(friend.name)!!"
+        resultLable.text = "I HAVE BEEN WIPPING THE PHONE SCREEN ALMOST TO THE HOLES TO PLEASE YOU!!\n\nYOUR \(friend.wellWisher).."
     }
     
 
@@ -29,7 +31,4 @@ class PullUpViewController: UIViewController {
     }
     */
 
-    @IBAction func pullEarsUp(_ sender: UIButton) {
-        
-    }
 }
