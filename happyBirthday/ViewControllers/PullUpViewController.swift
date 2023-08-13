@@ -8,13 +8,14 @@
 import UIKit
 
 class PullUpViewController: UIViewController {
+    
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var ears: UIButton!
-    var friend: BirthdayBoy!
-    private var currentPull = 0
     
-    private let juicyColores: [UIColor] = [.systemGreen, .systemPink, .systemRed, .systemOrange, .systemIndigo, .systemYellow, .systemBlue, .systemPurple, .systemMint, .systemBrown]
+    var friend: BirthdayBoy!
+    
+    private var currentPull = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,6 +107,7 @@ extension PullUpViewController {
         happyVC.modalTransitionStyle = .crossDissolve
         
         happyVC.friend = friend
+        
         present(happyVC, animated: true)
     }
     

@@ -19,38 +19,57 @@ class NextViewController: UIViewController {
     
     var friend: BirthdayBoy!
     
-//    private var currentPull = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         yearsQuestionLabel.text = "HOW OLD\nIS\n\(friend.name)??"
         friendsAgeLabel.text = "1"
+        setupKeyboardHiding()
     }
     
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //
-    //        guard let pullUpVC = segue.destination as? PullUpViewController else { return }
-    //        friend.age = Int(friendsAgeLabel.text!)!
-    //
-    //        if let userName = userNameTextField.text {
-    //            friend.wellWisher = userName == "" ? "ANONYMOUS" : userName
-    //        } else {
-    //            friend.wellWisher = "ANONYMOUS"
-    //        }
-    //
-    //        pullUpVC.friend = friend
-    //    }
+    private func setupKeyboardHiding() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector:
+                #selector (keyboardWillShow),
+            name:
+                UIResponder.keyboardWillShowNotification,
+            object:
+                nil
+        )
+        NotificationCenter.default.addObserver(
+            self,
+            selector:
+                #selector (keyboardWillHide),
+            name: UIResponder.keyboardWillHideNotification,
+            object:
+                nil
+        )
+    }
+    
+    @objc private func keyboardWillShow(sender: NSNotification) {
+        
+        guard let userinfo = sender.userInfo,
+              let keyboardFrame = userinfo[
+                UIResponder.keyboardFrameEndUserInfoKey
+              ] as? NSValue else { return }
+        if keyboardFrame.cgRectValue.origin.y < userNameTextField.frame.origin.y + userNameTextField.frame.height + 8 {
+            view.frame.origin.y = keyboardFrame.cgRectValue.origin.y - userNameTextField.frame.origin.y - userNameTextField.frame.height - 8
+        }
+    }
+    
+    @objc private func keyboardWillHide(sender: NSNotification) {
+        view.frame.origin.y = 0
+    }
     
     @IBAction func nextButtonHasPressed(_ sender: Any) {
         friend.age = Int(friendsAgeLabel.text!)!
-//        currentPull = friend.age
         
         if let userName = userNameTextField.text {
             friend.wellWisher = userName == "" ? "ANONYMOUS" : userName.uppercased()
         } else {
             friend.wellWisher = "ANONYMOUS"
         }
-            showPullUpVC()
+        showPullUpVC()
     }
     
 }
@@ -93,7 +112,7 @@ extension NextViewController {
         pullUpVC.providesPresentationContextTransitionStyle = true
         pullUpVC.definesPresentationContext = true
         pullUpVC.modalTransitionStyle = .crossDissolve
-//        pullUpVC.currentPull = currentPull
+        
         pullUpVC.friend = friend
         
         present(pullUpVC, animated: true)

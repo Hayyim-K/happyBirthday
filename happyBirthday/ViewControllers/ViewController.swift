@@ -10,12 +10,11 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var friendsNameTextField: UITextField!
-    
     @IBOutlet weak var friendsAvatar: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        friendsAvatar.image = UIImage(named: ["face35", "face65cuted"].randomElement()!)
         friendsNameTextField.layer.add(pulse(), forKey: "pulse")
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
@@ -60,7 +59,6 @@ class ViewController: UIViewController {
         
     }
     
-    
     @IBAction func selectPhotoButtonTapped(_ sender: UIButton) {
         showImageMenu()
     }
@@ -85,6 +83,12 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
             message: "How would you like to select a picture?",
             preferredStyle: .actionSheet
         )
+        
+        if let popoverController = alert.popoverPresentationController {
+            popoverController.sourceView = self.view
+            popoverController.sourceRect = CGRect(x: 0, y: self.view.bounds.height, width: 1, height: 1)
+        }
+        
         alert.addAction(
             UIAlertAction(
                 title: "Cancel",
@@ -109,15 +113,15 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
                 }
             )
         )
+        
         present(alert, animated: true)
     }
     
     func presetCamera() {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        //        imagePicker.allowsEditing = true
-        
         imagePicker.sourceType = .camera
+        
         present(imagePicker, animated: true)
     }
     
@@ -133,80 +137,13 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {
-            
-            
-            //            // Применяем фильтры к изображению
-            //            let filteredImage = applyFilters(to: pickedImage)
-            //
-            //            // Изменяем размер изображения
-            //            let resizedImage = resizeImage(image: filteredImage, targetSize: CGSize(width: 300, height: 300))
-            //
-            //            // Обрезаем изображение (если необходимо)
-            //            let croppedImage = cropImage(image: resizedImage, rect: CGRect(x: 50, y: 50, width: 200, height: 200))
-            
             friendsAvatar.image = pickedImage
-            
         }
         picker.dismiss(animated: true) {
             self.showImageSettings()
         }
     }
-    /*
-     // Применение фильтров к изображению
-     func applyFilters(to image: UIImage) -> UIImage {
-     guard let ciImage = CIImage(image: image) else {
-     return image
-     }
-     
-     let context = CIContext()
-     
-     // Применяем фильтры (здесь применяется Core Image фильтр Sepia Tone)
-     if let filter = CIFilter(name: "CISepiaTone") {
-     filter.setValue(ciImage, forKey: kCIInputImageKey)
-     filter.setValue(0.8, forKey: kCIInputIntensityKey)
-     
-     if let outputCIImage = filter.outputImage,
-     let cgImage = context.createCGImage(outputCIImage, from: outputCIImage.extent) {
-     return UIImage(cgImage: cgImage)
-     }
-     }
-     
-     return image
-     }
-     
-     // Метод для изменения размера изображения
-     func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
-     let size = image.size
-     let widthRatio = targetSize.width / size.width
-     let heightRatio = targetSize.height / size.height
-     let newSize = widthRatio > heightRatio ?
-     CGSize(width: size.width * heightRatio, height: size.height * heightRatio) :
-     CGSize(width: size.width * widthRatio, height: size.height * widthRatio)
-     
-     let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
-     
-     UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
-     image.draw(in: rect)
-     let newImage = UIGraphicsGetImageFromCurrentImageContext()
-     UIGraphicsEndImageContext()
-     
-     return newImage ?? image
-     }
-     
-     // Метод для обрезки изображения
-     func cropImage(image: UIImage, rect: CGRect) -> UIImage {
-     guard let cgImage = image.cgImage else {
-     return image
-     }
-     
-     guard let croppedCGImage = cgImage.cropping(to: rect) else {
-     return image
-     }
-     
-     return UIImage(cgImage: croppedCGImage)
-     }
-     */
-    
+  
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true)
     }
@@ -225,6 +162,7 @@ extension ViewController {
             self?.friendsAvatar.image = image
         }
         present(imageSetVC, animated: true)
+        
     }
 }
 
