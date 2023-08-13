@@ -36,7 +36,7 @@ class ImageSettingsViewController: UIViewController {
         super.viewDidLayoutSubviews()
         updateMinZoomScaleForSize()
     }
-
+    
     func takeScreenshotOfView(_ view: UIView) -> UIImage? {
         ear.isHidden = true
         rightEar.isHidden = true

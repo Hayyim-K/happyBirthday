@@ -31,7 +31,17 @@ public let presents = [ "🎈", "🎁", "🎊", "🎂", "🌹", "🌷", "💐", 
 
 public let juicyColores: [UIColor] = [.systemGreen, .systemPink, .systemRed, .systemOrange, .systemIndigo, .systemYellow, .systemBlue, .systemPurple, .systemMint, .systemBrown]
 
+
+public let greetings = """
+Dear user!
+
+This app is specifically designed for you to creatively congratulate your friend or relative on their birthday. All you need to do is enter the name and age of the birthday person and perform the ritual of ear pulling. You should pull the ears as many times as the birthday person's age. That's it. As a result, your friend will receive a cheerful card that will serve as evidence of your diligence.
+
+Well then, let's get started!
+"""
+
 public let introduction = """
+Ear Pulling Tradition: A Journey Through Cultures
 
 The tradition of pulling someone's ears on their birthday is a unique and intriguing practice that extends across different countries. It symbolizes a special wish for happiness and prosperity. This tradition is observed in various countries, including Italy, Spain, Hungary, and Argentina, where friends and family members pull the birthday person's ears a number of times corresponding to their age. This gesture conveys a desire for a long life and well-being.
 
@@ -50,5 +60,4 @@ Nevertheless, within the Chabad tradition, the Rebbe Rashab was known to pull bo
 In Jewish families, one might also encounter the ear-pulling tradition on birthdays. This practice likely migrated into Jewish culture from neighboring societies where Jews resided. This fascinating blend of customs highlights the interconnectedness of various cultural practices, showing how traditions evolve and intertwine across time and space.
 
 Through practices like the ear-pulling tradition, Jewish culture continues to embrace its rich history while adapting to modern contexts. These customs, though peculiar to outsiders, contribute to the vibrant tapestry of Jewish heritage, reflecting the enduring spirit of the community.
-
 """

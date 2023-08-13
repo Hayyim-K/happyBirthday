@@ -8,7 +8,7 @@
 import UIKit
 
 class HappyBirthdayViewController: UIViewController {
-
+    
     @IBOutlet weak var finalLabel: UILabel!
     @IBOutlet weak var resultLable: UILabel!
     @IBOutlet weak var present: UILabel!
@@ -32,7 +32,7 @@ class HappyBirthdayViewController: UIViewController {
         shareButton.isHidden = true
         resultLable.frame.origin.y = view.frame.height - resultLable.frame.height - 8
         returnButton.isHidden = true
-
+        
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, 0.0)
         view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
         let screenshot = UIGraphicsGetImageFromCurrentImageContext()

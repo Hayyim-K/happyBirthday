@@ -23,27 +23,7 @@ class PullUpViewController: UIViewController {
         avatar.image = friend.image
         currentPull = friend.age
         infoLabel.text = "PULL IT UP\n\(currentPull)\nTIMES!!"
-        
-        //
-        
     }
-    
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //
-    //        guard let happyVC = segue.destination as? HappyBirthdayViewController else { return }
-    //        happyVC.friend = friend
-    //    }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
     @IBAction func pullEarsUp(_ sender: UIButton) {
         view.backgroundColor = juicyColores.randomElement()

@@ -5,9 +5,6 @@
 //  Created by vitasiy on 11/07/2023.
 //
 
-// add keyboard handler for hidding a kayboard
-//
-
 import UIKit
 
 class NextViewController: UIViewController {

@@ -77,7 +77,55 @@ extension ViewController: UITextFieldDelegate {
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
-    func showImageMenu() {
+    func presetCamera() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .camera
+        
+        present(imagePicker, animated: true)
+    }
+    
+    func showImagePicker() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        
+        present(imagePicker, animated: true)
+    }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[.originalImage] as? UIImage {
+            friendsAvatar.image = pickedImage
+        }
+        picker.dismiss(animated: true) {
+            self.showImageSettings()
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true)
+    }
+}
+
+extension ViewController {
+    
+    private func showImageSettings() {
+        let imageSetVC = self.storyboard?.instantiateViewController(withIdentifier: "ImageSettingsViewController") as! ImageSettingsViewController
+        imageSetVC.modalPresentationStyle = .overCurrentContext
+        imageSetVC.providesPresentationContextTransitionStyle = true
+        imageSetVC.definesPresentationContext = true
+        imageSetVC.modalTransitionStyle = .crossDissolve
+        imageSetVC.image = friendsAvatar.image
+        imageSetVC.completionHandler = { [weak self] image in
+            print(image.size)
+            self?.friendsAvatar.image = image
+        }
+        present(imageSetVC, animated: true)
+    }
+    
+    private func showImageMenu() {
         let alert = UIAlertController(
             title: "Profile Picture",
             message: "How would you like to select a picture?",
@@ -117,52 +165,5 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         present(alert, animated: true)
     }
     
-    func presetCamera() {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .camera
-        
-        present(imagePicker, animated: true)
-    }
-    
-    func showImagePicker() {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .photoLibrary
-        
-        present(imagePicker, animated: true)
-    }
-    
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let pickedImage = info[.originalImage] as? UIImage {
-            friendsAvatar.image = pickedImage
-        }
-        picker.dismiss(animated: true) {
-            self.showImageSettings()
-        }
-    }
-  
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true)
-    }
-}
-
-extension ViewController {
-    private func showImageSettings() {
-        let imageSetVC = self.storyboard?.instantiateViewController(withIdentifier: "ImageSettingsViewController") as! ImageSettingsViewController
-        imageSetVC.modalPresentationStyle = .overCurrentContext
-        imageSetVC.providesPresentationContextTransitionStyle = true
-        imageSetVC.definesPresentationContext = true
-        imageSetVC.modalTransitionStyle = .crossDissolve
-        imageSetVC.image = friendsAvatar.image
-        imageSetVC.completionHandler = { [weak self] image in
-            print(image.size)
-            self?.friendsAvatar.image = image
-        }
-        present(imageSetVC, animated: true)
-        
-    }
 }
 
