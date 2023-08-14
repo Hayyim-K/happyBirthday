@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6F7C550B2A7EDE1800F6E617 /* ImageSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7C550A2A7EDE1800F6E617 /* ImageSettingsViewController.swift */; };
-		6F7C55302A85919E00F6E617 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7C552F2A85919E00F6E617 /* test.swift */; };
 		6F7C55322A882C8B00F6E617 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7C55312A882C8B00F6E617 /* IntroductionViewController.swift */; };
 		6F89E3072A5DEA1B00693B32 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F89E3062A5DEA1B00693B32 /* NextViewController.swift */; };
 		6FC4F5532A600D620026C60B /* PullUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC4F5522A600D620026C60B /* PullUpViewController.swift */; };
@@ -47,7 +46,6 @@
 
 /* Begin PBXFileReference section */
 		6F7C550A2A7EDE1800F6E617 /* ImageSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSettingsViewController.swift; sourceTree = "<group>"; };
-		6F7C552F2A85919E00F6E617 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		6F7C55312A882C8B00F6E617 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		6F89E3062A5DEA1B00693B32 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		6FC4F5522A600D620026C60B /* PullUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpViewController.swift; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 		6FD9038F2A5C5F6900094FAA = {
 			isa = PBXGroup;
 			children = (
-				6F7C552F2A85919E00F6E617 /* test.swift */,
 				6FD9039A2A5C5F6900094FAA /* happyBirthday */,
 				6FD903B12A5C5F6B00094FAA /* happyBirthdayTests */,
 				6FD903BB2A5C5F6B00094FAA /* happyBirthdayUITests */,
@@ -347,7 +344,6 @@
 				6FD9039C2A5C5F6900094FAA /* AppDelegate.swift in Sources */,
 				6FD9039E2A5C5F6900094FAA /* SceneDelegate.swift in Sources */,
 				6FC4F5602A6340FA0026C60B /* Constants.swift in Sources */,
-				6F7C55302A85919E00F6E617 /* test.swift in Sources */,
 				6FC5121F2A897F5B00CD8EFE /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,7 +513,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = BH26MDT64T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = happyBirthday/Info.plist;
@@ -530,7 +526,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = hayyimsTeam.happyBirthday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -546,7 +542,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = BH26MDT64T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = happyBirthday/Info.plist;
@@ -559,7 +555,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = hayyimsTeam.happyBirthday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
