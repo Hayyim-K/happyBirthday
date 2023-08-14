@@ -6,22 +6,26 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class AboutUsViewController: UIViewController {
     
     @IBAction func visitWebSite(_ sender: Any) {
+        UISelectionFeedbackGenerator().selectionChanged()
         if let url = URL(string: "https://b2banalytica.wixsite.com/primitivedevelopment") {
             UIApplication.shared.open(url)
         }
     }
     
     @IBAction func visitOurAppStore(_ sender: Any) {
+        UISelectionFeedbackGenerator().selectionChanged()
         if let url = URL(string: "https://apps.apple.com/developer/vitalii-kukhar/id1693449151") {
             UIApplication.shared.open(url)
         }
     }
     
     @IBAction func supportUs(_ sender: Any) {
+        AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate), {})
         
         let title = "This page is under development"
         let message = "Right now, it's better to support the Armed Forces of Ukraine!\nThank you."
@@ -31,6 +35,8 @@ class AboutUsViewController: UIViewController {
     
     
     @IBAction func backToApp(_ sender: Any) {
+        UISelectionFeedbackGenerator().selectionChanged()
+        
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let delegate = windowScene.delegate as? SceneDelegate {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

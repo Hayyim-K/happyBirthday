@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var friendsNameTextField: UITextField!
@@ -56,10 +57,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func nextButtonHasPressed(_ sender: Any) {
-        
+        UISelectionFeedbackGenerator().selectionChanged()
     }
     
     @IBAction func selectPhotoButtonTapped(_ sender: UIButton) {
+        UISelectionFeedbackGenerator().selectionChanged()
         showImageMenu()
     }
 }

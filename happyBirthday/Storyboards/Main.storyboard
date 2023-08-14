@@ -44,7 +44,7 @@
                                             <color key="NSBackgroundColor" red="0.92916256189346313" green="0.81596732139587402" blue="0.17593416571617126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.072378493845462799" green="0.03325045108795166" blue="0.018698595464229584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="18" name="AmericanTypewriter"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             <shadow key="NSShadow">
                                                 <size key="offset" width="7.3478807948841188e-16" height="12"/>
                                                 <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -76,6 +76,7 @@
                                             </attributedString>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="introductionButtonHasPressed:" destination="Va4-bs-fCI" eventType="touchUpInside" id="8Fm-aA-bhb"/>
                                             <segue destination="Bgq-9Y-axk" kind="show" id="D5S-S8-8ev"/>
                                         </connections>
                                     </button>
@@ -95,6 +96,7 @@
                                             </attributedString>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="aboutUsButtonHasPressed:" destination="Va4-bs-fCI" eventType="touchUpInside" id="Kci-Dn-AYg"/>
                                             <segue destination="5or-Tw-mZg" kind="show" id="ANq-o0-7gi"/>
                                         </connections>
                                     </button>
@@ -113,6 +115,7 @@
                                             </attributedString>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="start:" destination="Va4-bs-fCI" eventType="touchUpInside" id="YZ6-R5-rDG"/>
                                             <segue destination="Phc-m4-wr9" kind="show" id="yJu-lC-QQd"/>
                                         </connections>
                                     </button>
@@ -186,6 +189,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="nextAction:" destination="Bgq-9Y-axk" eventType="touchUpInside" id="yov-qm-2BP"/>
                                     <segue destination="Phc-m4-wr9" kind="show" id="4oY-0F-VvI"/>
                                 </connections>
                             </button>
@@ -721,7 +725,7 @@ PHOTO!!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32X-MJ-vw8">
-                                <rect key="frame" x="16" y="190" width="343" height="131.5"/>
+                                <rect key="frame" x="16" y="190" width="343" height="170"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">...AND
@@ -732,7 +736,7 @@ YOUR NAME??</string>
                                             <color key="NSBackgroundColor" red="0.0" green="1" blue="1" alpha="0.60642591059602646" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="NSColor" red="1" green="0.0" blue="0.41356994984225182" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <font key="NSFont" size="30" name="Menlo-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -741,7 +745,7 @@ YOUR NAME??</string>
                                 <size key="shadowOffset" width="3" height="2"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a6h-Mg-chW">
-                                <rect key="frame" x="16" y="345.5" width="343" height="37"/>
+                                <rect key="frame" x="16" y="384" width="343" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -925,6 +929,7 @@ MARK??</string>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
                             <constraint firstItem="kPn-R8-qok" firstAttribute="trailing" secondItem="32X-MJ-vw8" secondAttribute="trailing" constant="16" id="60r-Fc-WhJ"/>
+                            <constraint firstItem="32X-MJ-vw8" firstAttribute="height" secondItem="Z1r-rq-0Tn" secondAttribute="height" multiplier="0.254873" id="90v-Cr-ELt"/>
                             <constraint firstItem="QtB-UE-kkc" firstAttribute="bottom" secondItem="Z1r-rq-0Tn" secondAttribute="bottom" id="9FO-4f-Ivo"/>
                             <constraint firstItem="32X-MJ-vw8" firstAttribute="leading" secondItem="kPn-R8-qok" secondAttribute="leading" constant="16" id="Jtg-h4-A4z"/>
                             <constraint firstItem="QtB-UE-kkc" firstAttribute="height" secondItem="Z1r-rq-0Tn" secondAttribute="height" multiplier="0.144893" id="QRd-hq-cim"/>
@@ -939,7 +944,6 @@ MARK??</string>
                             <constraint firstItem="a6h-Mg-chW" firstAttribute="leading" secondItem="kPn-R8-qok" secondAttribute="leading" constant="16" id="vZk-b8-PMG"/>
                             <constraint firstItem="QtB-UE-kkc" firstAttribute="centerX" secondItem="Z1r-rq-0Tn" secondAttribute="centerX" id="vvv-QE-fkf"/>
                             <constraint firstItem="QtB-UE-kkc" firstAttribute="trailing" secondItem="kPn-R8-qok" secondAttribute="trailing" id="xSx-jr-ftx"/>
-                            <constraint firstItem="32X-MJ-vw8" firstAttribute="height" secondItem="Z1r-rq-0Tn" secondAttribute="height" multiplier="0.19715" id="zAN-mA-YYA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hTA-fe-xOX"/>
@@ -1020,9 +1024,7 @@ TIMES!!</string>
                             <constraint firstItem="9dd-xP-5pY" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Qg7-EM-h9c"/>
                             <constraint firstItem="ifR-35-doa" firstAttribute="height" secondItem="JhV-Kq-pXU" secondAttribute="height" multiplier="0.629893" id="Y3C-DY-wOf"/>
                             <constraint firstItem="wJc-26-JLR" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.223005" id="YR6-ZN-7xG"/>
-                            <constraint firstItem="ifR-35-doa" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="16" id="ZCy-gI-D6j"/>
                             <constraint firstItem="ifR-35-doa" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="aML-24-SJA"/>
-                            <constraint firstAttribute="trailing" secondItem="ifR-35-doa" secondAttribute="trailing" constant="16" id="arI-mj-Z1r"/>
                             <constraint firstItem="JhV-Kq-pXU" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="cdq-sk-HmB"/>
                             <constraint firstItem="wJc-26-JLR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fh4-Ln-Pg1"/>
                             <constraint firstItem="32S-Xk-ghn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fnz-7w-EzW"/>
@@ -1179,6 +1181,26 @@ TIMES!!</string>
                                     <action selector="returnToBegining:" destination="ALD-9N-mhW" eventType="touchUpInside" id="ydb-bj-fQt"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pb0-0V-4xC">
+                                <rect key="frame" x="0.0" y="100" width="226" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Ear Pulling Postcard">
+                                        <attributes>
+                                            <color key="NSColor" red="0.072378493845462799" green="0.03325045108795166" blue="0.018698595464229584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="22" name="AmericanTypewriter"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <shadow key="NSShadow">
+                                                <size key="offset" width="7.3478807948841188e-16" height="12"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            </shadow>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" red="0.057855516670000003" green="0.01409805473" blue="0.016099525619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" red="1" green="0.0" blue="0.61821395499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fA3-wG-5uE"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
@@ -1216,6 +1238,7 @@ TIMES!!</string>
                     <connections>
                         <outlet property="face" destination="ozg-9J-p6K" id="VMn-wm-c06"/>
                         <outlet property="finalLabel" destination="ZHe-fq-3Qb" id="uLN-Li-8H5"/>
+                        <outlet property="logo" destination="pb0-0V-4xC" id="TJ9-fg-cgk"/>
                         <outlet property="present" destination="yLW-Ab-R1W" id="zqp-YA-Nyb"/>
                         <outlet property="resultLable" destination="RZQ-9h-LKL" id="8z0-3k-k9s"/>
                         <outlet property="returnButton" destination="6gs-e8-XZ5" id="Dyh-RV-wHq"/>
@@ -1224,7 +1247,7 @@ TIMES!!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKK-nx-Ddb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2156" y="385"/>
+            <point key="canvasLocation" x="2156" y="384.55772113943033"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="983-dd-eGN">
@@ -1288,7 +1311,7 @@ Primitive Development</string>
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Visit Website">
                                                     <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="NSColor" red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="18" name="Helvetica-Bold"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
@@ -1308,7 +1331,7 @@ Primitive Development</string>
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Our Projects">
                                                     <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="18" name="Helvetica-Bold"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
@@ -1327,6 +1350,7 @@ Primitive Development</string>
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Support Us">
                                                     <attributes>
+                                                        <color key="NSColor" red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="18" name="Helvetica-Bold"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
@@ -1346,7 +1370,7 @@ Primitive Development</string>
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Back to App">
                                                     <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="18" name="Helvetica-Bold"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>

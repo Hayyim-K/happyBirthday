@@ -35,7 +35,9 @@ public let juicyColores: [UIColor] = [.systemGreen, .systemPink, .systemRed, .sy
 public let greetings = """
 Dear user!
 
-This app is specifically designed for you to creatively congratulate your friend or relative on their birthday. All you need to do is enter the name and age of the birthday person and perform the ritual of ear pulling. You should pull the ears as many times as the birthday person's age. That's it. As a result, your friend will receive a cheerful card that will serve as evidence of your diligence.
+This app is specifically designed for you to creatively congratulate your friend or relative on their birthday.
+All you need to do is enter the name and age of the birthday person and perform the ritual of ear pulling. You should pull the ears as many times as the birthday person's age. That's it.
+As a result, your friend will receive a cheerful card that will serve as evidence of your diligence.
 
 Well then, let's get started!
 """

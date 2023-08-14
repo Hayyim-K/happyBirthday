@@ -26,6 +26,7 @@ class ImageSettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UISelectionFeedbackGenerator().selectionChanged()
         scrollView.delegate = self
         avatar.image = image
         updateMinZoomScaleForSize()
@@ -37,7 +38,7 @@ class ImageSettingsViewController: UIViewController {
         updateMinZoomScaleForSize()
     }
     
-    func takeScreenshotOfView(_ view: UIView) -> UIImage? {
+    private func takeScreenshotOfView(_ view: UIView) -> UIImage? {
         ear.isHidden = true
         rightEar.isHidden = true
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, 0.0)
@@ -47,7 +48,7 @@ class ImageSettingsViewController: UIViewController {
         return screenshot
     }
     
-    func cropImage(_ image: UIImage, toRect rect: CGRect) -> UIImage? {
+    private func cropImage(_ image: UIImage, toRect rect: CGRect) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(rect.size, false, image.scale)
         let context = UIGraphicsGetCurrentContext()
         context?.translateBy(x: -rect.origin.x, y: -rect.origin.y)
@@ -61,6 +62,7 @@ class ImageSettingsViewController: UIViewController {
     }
     
     @IBAction func doneButtonHasPressed(_ sender: Any) {
+        UISelectionFeedbackGenerator().selectionChanged()
         dismiss(animated: true) {
             guard let screenShot = self.takeScreenshotOfView(self.view)
             else { return }
@@ -76,18 +78,19 @@ class ImageSettingsViewController: UIViewController {
     }
     
     @IBAction func cancelbuttonHasPressed(_ sender: Any) {
+        UISelectionFeedbackGenerator().selectionChanged()
         dismiss(animated: true)
     }
 }
 
 extension ImageSettingsViewController: UIScrollViewDelegate {
     
-    func updateMinZoomScaleForSize() {
+    private func updateMinZoomScaleForSize() {
         scrollView.minimumZoomScale = 0.01
         scrollView.maximumZoomScale = 10
     }
     
-    func updateConstraintsForSize(_ size: CGSize) {
+    private func updateConstraintsForSize(_ size: CGSize) {
         let yOffset = max(0, (size.height - avatar.frame.height) / 2)
         avatarTopConstraint.constant = yOffset
         avatarBottomConstraint.constant = yOffset

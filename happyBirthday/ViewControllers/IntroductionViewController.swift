@@ -17,4 +17,7 @@ class IntroductionViewController: UIViewController {
         textView.text = introduction
     }
     
+    @IBAction func nextAction(_ sender: Any) {
+        UISelectionFeedbackGenerator().selectionChanged()
+    }
 }

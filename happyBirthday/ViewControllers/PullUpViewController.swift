@@ -26,6 +26,8 @@ class PullUpViewController: UIViewController {
     }
     
     @IBAction func pullEarsUp(_ sender: UIButton) {
+        UISelectionFeedbackGenerator().selectionChanged()
+        
         view.backgroundColor = juicyColores.randomElement()
         currentPull -= 1
         infoLabel.text = "PULL IT UP\n\(currentPull)\nTIMES!!"

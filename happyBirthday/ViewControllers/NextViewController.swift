@@ -45,6 +45,8 @@ class NextViewController: UIViewController {
     
     @objc private func keyboardWillShow(sender: NSNotification) {
         
+        UISelectionFeedbackGenerator().selectionChanged()
+        
         guard let userinfo = sender.userInfo,
               let keyboardFrame = userinfo[
                 UIResponder.keyboardFrameEndUserInfoKey
@@ -59,6 +61,7 @@ class NextViewController: UIViewController {
     }
     
     @IBAction func nextButtonHasPressed(_ sender: Any) {
+        UISelectionFeedbackGenerator().selectionChanged()
         friend.age = Int(friendsAgeLabel.text!)!
         
         if let userName = userNameTextField.text {
