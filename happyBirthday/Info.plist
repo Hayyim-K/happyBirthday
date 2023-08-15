@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>to choose a picture from your Library</string>
+	<string>To choose a picture from your Library</string>
 	<key>NSCameraUsageDescription</key>
-	<string>to take a picture</string>
+	<string>To take a photo of your friend when he is next to you</string>
 	<key>NSFaceIDUsageDescription</key>
-	<string>Parental Gates</string>
+	<string>The content you are trying to access includes internet access via Safari. To ensure the security of your children and provide more convenient access to content, we offer using biometric authentication (such as Touch ID or Face ID) for our parental gates. Are you ready to use this method?</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
