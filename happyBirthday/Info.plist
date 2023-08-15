@@ -6,6 +6,8 @@
 	<string>to choose a picture from your Library</string>
 	<key>NSCameraUsageDescription</key>
 	<string>to take a picture</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Parental Gates</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

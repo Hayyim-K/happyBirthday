@@ -97,7 +97,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="aboutUsButtonHasPressed:" destination="Va4-bs-fCI" eventType="touchUpInside" id="Kci-Dn-AYg"/>
-                                            <segue destination="5or-Tw-mZg" kind="show" id="ANq-o0-7gi"/>
+                                            <segue destination="5or-Tw-mZg" kind="show" identifier="aboutUs" id="ANq-o0-7gi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uE-0I-87V">
