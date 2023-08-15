@@ -19,7 +19,7 @@ class PullUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(currentPull)
+        
         avatar.image = friend.image
         currentPull = friend.age
         infoLabel.text = "PULL IT UP\n\(currentPull)\nTIMES!!"

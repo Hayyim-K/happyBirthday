@@ -10,12 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var arrow: UIImageView!
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var friendsNameTextField: UITextField!
     @IBOutlet weak var friendsAvatar: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityIndicator.isHidden = true
+        
+        arrow.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 6.5 )
+        
         friendsAvatar.image = UIImage(named: ["face35", "face65cuted"].randomElement()!)
+        
         friendsNameTextField.layer.add(pulse(), forKey: "pulse")
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
@@ -108,6 +117,8 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true)
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
     }
 }
 
@@ -121,8 +132,11 @@ extension ViewController {
         imageSetVC.modalTransitionStyle = .crossDissolve
         imageSetVC.image = friendsAvatar.image
         imageSetVC.completionHandler = { [weak self] image in
-            print(image.size)
+            
             self?.friendsAvatar.image = image
+            
+            self?.activityIndicator.stopAnimating()
+            self?.activityIndicator.isHidden = true
         }
         present(imageSetVC, animated: true)
     }
@@ -150,7 +164,12 @@ extension ViewController {
                 title: "Take Photo",
                 style: .default,
                 handler: { [weak self] _ in
+                    
+                    self?.activityIndicator.isHidden = false
+                    self?.activityIndicator.startAnimating()
+                    
                     self?.presetCamera()
+                    
                 }
             )
         )
@@ -159,7 +178,12 @@ extension ViewController {
                 title: "Choose Photo",
                 style: .default,
                 handler: { [weak self] _ in
+                    
+                    self?.activityIndicator.isHidden = false
+                    self?.activityIndicator.startAnimating()
+                    
                     self?.showImagePicker()
+                    
                 }
             )
         )

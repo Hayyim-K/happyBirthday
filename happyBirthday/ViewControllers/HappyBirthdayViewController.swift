@@ -22,7 +22,6 @@ class HappyBirthdayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = juicyColores.randomElement()
         face.image = friend.image
         present.text = presents.randomElement()
@@ -31,6 +30,7 @@ class HappyBirthdayViewController: UIViewController {
         setTheLogo()
         
     }
+
     
     private func setTheLogo() {
         logo.frame.size = CGSize(width: 226, height: 34)

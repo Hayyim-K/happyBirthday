@@ -18,6 +18,7 @@ class NextViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(yearsPickerView.frame.size)
         yearsQuestionLabel.text = "HOW OLD\nIS\n\(friend.name)??"
         friendsAgeLabel.text = "1"
         setupKeyboardHiding()
