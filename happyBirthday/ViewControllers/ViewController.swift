@@ -30,7 +30,14 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             self.friendsAvatar.layer.add(self.pulse(), forKey: "pulse")
         }
+        
     }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        activityIndicator.stopAnimating()
+    }
+    
     
     // MARK: - Navigation
     
@@ -50,6 +57,22 @@ class ViewController: UIViewController {
         )
         nextVC.friend = friend
     }
+    
+    // Observe changes in the presentedViewController property
+//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+//        if keyPath == #keyPath(UIViewController.presentedViewController) {
+//            if imagePicker.presentingViewController == nil {
+//                // Image picker was dismissed
+//                activityIndicator.stopAnimating()
+//                activityIndicator.removeFromSuperview()
+//            }
+//        }
+//    }
+    
+//    deinit {
+//            // Remove observer when the view controller is deallocated
+//            imagePicker.removeObserver(self, forKeyPath: #keyPath(UIViewController.presentedViewController))
+//        }
     
     private func pulse() -> CAAnimation {
         let pulseAnimation = CABasicAnimation(keyPath: "transform.scale")
@@ -75,6 +98,7 @@ class ViewController: UIViewController {
     }
 }
 
+
 extension ViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -85,6 +109,7 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
 }
+
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
@@ -101,9 +126,21 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         imagePicker.delegate = self
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
+        imagePicker.modalPresentationStyle = .fullScreen
+
+        
+        // Add observer for the "presentedViewController" key path
+        imagePicker.addObserver(self, forKeyPath: #keyPath(UIViewController.presentedViewController), options: [.old, .new], context: nil)
+        
+        //        // Add a gesture recognizer to detect swipe gesture
+        //        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
+        //        swipeGesture.direction = .down
+        //        imagePicker.view.addGestureRecognizer(swipeGesture)
         
         present(imagePicker, animated: true)
     }
+    
+    
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -116,9 +153,10 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true)
-        activityIndicator.stopAnimating()
-        activityIndicator.isHidden = true
+        picker.dismiss(animated: true) {
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
+        }
     }
 }
 
@@ -193,3 +231,14 @@ extension ViewController {
     
 }
 
+//extension ViewController {
+//
+//    @objc func handleSwipeGesture(_ gesture: UISwipeGestureRecognizer) {
+//        if gesture.state == .ended {
+//            // Stop the activity indicator
+//            activityIndicator.stopAnimating()
+//            activityIndicator.isHidden = true
+//        }
+//    }
+//
+//}
