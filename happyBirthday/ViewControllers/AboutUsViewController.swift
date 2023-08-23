@@ -71,6 +71,7 @@ extension AboutUsViewController {
         let noAction = UIAlertAction(title: "Not now", style: .default)
         
         alert.addAction(okAction)
+        alert.addAction(hayyimAction)
         alert.addAction(noAction)
         
         present(alert, animated: true)
