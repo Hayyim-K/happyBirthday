@@ -61,6 +61,13 @@ extension AboutUsViewController {
             }
         }
         
+        let hayyimAction = UIAlertAction(title: "Support Us",
+                                     style: .default) { _ in
+            if let url = URL(string: "https://www.buymeacoffee.com/hayyim") {
+                UIApplication.shared.open(url)
+            }
+        }
+        
         let noAction = UIAlertAction(title: "Not now", style: .default)
         
         alert.addAction(okAction)

@@ -10,11 +10,13 @@ import AudioToolbox
 
 class HappyBirthdayViewController: UIViewController {
     @IBOutlet weak var logo: UILabel!
-    
     @IBOutlet weak var finalLabel: UILabel!
     @IBOutlet weak var resultLable: UILabel!
     @IBOutlet weak var present: UILabel!
+    
     @IBOutlet weak var face: UIImageView!
+    @IBOutlet weak var qrCodeEPP: UIImageView!
+    
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var returnButton: UIButton!
     
@@ -42,6 +44,8 @@ class HappyBirthdayViewController: UIViewController {
     private func takeScreenshotOfView(_ view: UIView) -> UIImage? {
         shareButton.isHidden = true
         returnButton.isHidden = true
+        qrCodeEPP.isHidden = false
+        
         logo.isHidden = false
         resultLable.frame.origin.y = view.frame.height - resultLable.frame.height - 8
         
@@ -49,7 +53,7 @@ class HappyBirthdayViewController: UIViewController {
         view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
         let screenshot = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
+        qrCodeEPP.isHidden = true
         shareButton.isHidden = false
         returnButton.isHidden = false
         
@@ -61,6 +65,7 @@ class HappyBirthdayViewController: UIViewController {
         UISelectionFeedbackGenerator().selectionChanged()
         
         guard let postcard = takeScreenshotOfView(view) else { return }
+        
         let activity = UIActivityViewController(
             activityItems: [postcard],
             applicationActivities: nil

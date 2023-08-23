@@ -801,7 +801,7 @@ PHOTO!!</string>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2v0-k0-vbu"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dJc-nR-IVo" firstAttribute="leading" secondItem="2v0-k0-vbu" secondAttribute="leading" id="9JM-zg-vDT"/>
                             <constraint firstItem="boc-Gv-KUk" firstAttribute="leading" secondItem="2v0-k0-vbu" secondAttribute="leading" id="I7y-n7-SyD"/>
@@ -1199,7 +1199,7 @@ TIMES!!</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHe-fq-3Qb">
-                                <rect key="frame" x="16" y="80" width="343" height="37"/>
+                                <rect key="frame" x="16" y="85" width="343" height="37"/>
                                 <attributedString key="attributedText">
                                     <fragment content="HAPPY BIRTHDAY!">
                                         <attributes>
@@ -1215,7 +1215,7 @@ TIMES!!</string>
                                 <size key="shadowOffset" width="3" height="2"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZQ-9h-LKL">
-                                <rect key="frame" x="8" y="157" width="359" height="28"/>
+                                <rect key="frame" x="8" y="162" width="359" height="28"/>
                                 <attributedString key="attributedText">
                                     <fragment content="HAPPY BIRTHDAY!">
                                         <attributes>
@@ -1316,15 +1316,23 @@ TIMES!!</string>
                                 <color key="shadowColor" red="1" green="0.0" blue="0.61821395499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrCodeEPP_" translatesAutoresizingMaskIntoConstraints="NO" id="Jki-sg-aJh">
+                                <rect key="frame" x="288" y="0.0" width="87" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="1fJ-Bw-8ah"/>
+                                    <constraint firstAttribute="height" constant="87" id="HgI-e0-qKi"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fA3-wG-5uE"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
-                            <constraint firstItem="ZHe-fq-3Qb" firstAttribute="top" secondItem="uo5-Ww-eUi" secondAttribute="top" constant="80" id="5Uj-3L-ZrM"/>
+                            <constraint firstItem="ZHe-fq-3Qb" firstAttribute="top" secondItem="uo5-Ww-eUi" secondAttribute="top" constant="85" id="5Uj-3L-ZrM"/>
                             <constraint firstItem="ozg-9J-p6K" firstAttribute="centerX" secondItem="uo5-Ww-eUi" secondAttribute="centerX" id="6EJ-7t-yEA"/>
                             <constraint firstItem="Zt1-mS-H5x" firstAttribute="centerX" secondItem="uo5-Ww-eUi" secondAttribute="centerX" id="AiR-fX-DoC"/>
                             <constraint firstItem="Zt1-mS-H5x" firstAttribute="centerY" secondItem="ozg-9J-p6K" secondAttribute="centerY" constant="-30" id="E6z-lE-8XM"/>
                             <constraint firstItem="Zt1-mS-H5x" firstAttribute="height" secondItem="ozg-9J-p6K" secondAttribute="height" multiplier="1.76868" id="Gm1-2r-8ns"/>
+                            <constraint firstItem="fA3-wG-5uE" firstAttribute="trailing" secondItem="Jki-sg-aJh" secondAttribute="trailing" id="Ird-Cm-243"/>
                             <constraint firstItem="KSZ-V8-nzv" firstAttribute="width" secondItem="ozg-9J-p6K" secondAttribute="width" multiplier="1.18935" id="K6e-kN-oQs"/>
                             <constraint firstItem="5Mg-gm-vSO" firstAttribute="centerX" secondItem="uo5-Ww-eUi" secondAttribute="centerX" id="MZ5-Rn-tWJ"/>
                             <constraint firstItem="KSZ-V8-nzv" firstAttribute="centerX" secondItem="uo5-Ww-eUi" secondAttribute="centerX" id="Myu-jE-apI"/>
@@ -1334,6 +1342,7 @@ TIMES!!</string>
                             <constraint firstItem="5Mg-gm-vSO" firstAttribute="width" relation="greaterThanOrEqual" secondItem="ozg-9J-p6K" secondAttribute="width" multiplier="5.40237" id="RiS-0x-vT0"/>
                             <constraint firstItem="6gs-e8-XZ5" firstAttribute="leading" secondItem="uo5-Ww-eUi" secondAttribute="leading" constant="-144" id="SDB-NR-Jqg"/>
                             <constraint firstItem="RZQ-9h-LKL" firstAttribute="leading" secondItem="uo5-Ww-eUi" secondAttribute="leading" constant="8" id="SWJ-YT-Htk"/>
+                            <constraint firstItem="Jki-sg-aJh" firstAttribute="top" secondItem="uo5-Ww-eUi" secondAttribute="top" id="ToP-iL-S4T"/>
                             <constraint firstItem="yLW-Ab-R1W" firstAttribute="centerX" secondItem="5Mg-gm-vSO" secondAttribute="centerX" constant="88" id="aeX-OI-HKM"/>
                             <constraint firstItem="PCW-Y5-iPL" firstAttribute="leading" secondItem="uo5-Ww-eUi" secondAttribute="leadingMargin" constant="8" id="dsd-S4-w4r"/>
                             <constraint firstItem="ZHe-fq-3Qb" firstAttribute="leading" secondItem="uo5-Ww-eUi" secondAttribute="leading" constant="16" id="e2P-GO-87N"/>
@@ -1354,6 +1363,7 @@ TIMES!!</string>
                         <outlet property="finalLabel" destination="ZHe-fq-3Qb" id="uLN-Li-8H5"/>
                         <outlet property="logo" destination="pb0-0V-4xC" id="TJ9-fg-cgk"/>
                         <outlet property="present" destination="yLW-Ab-R1W" id="zqp-YA-Nyb"/>
+                        <outlet property="qrCodeEPP" destination="Jki-sg-aJh" id="QEg-5E-oPb"/>
                         <outlet property="resultLable" destination="RZQ-9h-LKL" id="8z0-3k-k9s"/>
                         <outlet property="returnButton" destination="6gs-e8-XZ5" id="Dyh-RV-wHq"/>
                         <outlet property="shareButton" destination="PCW-Y5-iPL" id="ihV-w0-WRH"/>
@@ -1541,6 +1551,7 @@ Primitive Development</string>
         <image name="hat" width="451" height="898"/>
         <image name="leftActiveEar" width="656" height="1030"/>
         <image name="paintbrush.fill" catalog="system" width="122" height="128"/>
+        <image name="qrCodeEPP_" width="1127" height="1127"/>
         <image name="rightActiveEar" width="656" height="1030"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="theatermask.and.paintbrush.fill" catalog="system" width="128" height="122"/>
