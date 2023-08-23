@@ -58,22 +58,6 @@ class ViewController: UIViewController {
         nextVC.friend = friend
     }
     
-    // Observe changes in the presentedViewController property
-//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-//        if keyPath == #keyPath(UIViewController.presentedViewController) {
-//            if imagePicker.presentingViewController == nil {
-//                // Image picker was dismissed
-//                activityIndicator.stopAnimating()
-//                activityIndicator.removeFromSuperview()
-//            }
-//        }
-//    }
-    
-//    deinit {
-//            // Remove observer when the view controller is deallocated
-//            imagePicker.removeObserver(self, forKeyPath: #keyPath(UIViewController.presentedViewController))
-//        }
-    
     private func pulse() -> CAAnimation {
         let pulseAnimation = CABasicAnimation(keyPath: "transform.scale")
         pulseAnimation.duration = 0.3
@@ -127,21 +111,9 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
         imagePicker.modalPresentationStyle = .fullScreen
-
-        
-        // Add observer for the "presentedViewController" key path
-        imagePicker.addObserver(self, forKeyPath: #keyPath(UIViewController.presentedViewController), options: [.old, .new], context: nil)
-        
-        //        // Add a gesture recognizer to detect swipe gesture
-        //        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
-        //        swipeGesture.direction = .down
-        //        imagePicker.view.addGestureRecognizer(swipeGesture)
         
         present(imagePicker, animated: true)
     }
-    
-    
-    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {
@@ -169,14 +141,37 @@ extension ViewController {
         imageSetVC.definesPresentationContext = true
         imageSetVC.modalTransitionStyle = .crossDissolve
         imageSetVC.image = friendsAvatar.image
-        imageSetVC.completionHandler = { [weak self] image in
+        imageSetVC.completionHandler = { [weak self] image, isPaintTapped in
             
             self?.friendsAvatar.image = image
             
             self?.activityIndicator.stopAnimating()
             self?.activityIndicator.isHidden = true
+            if isPaintTapped {
+                self?.activityIndicator.isHidden = false
+                self?.activityIndicator.startAnimating()
+                self?.showPaintViewController()
+            }
+            
         }
         present(imageSetVC, animated: true)
+    }
+    
+    private func showPaintViewController() {
+        let showPaintVC = self.storyboard?.instantiateViewController(withIdentifier: "PencilKitViewController") as! PencilKitViewController
+        showPaintVC.modalPresentationStyle = .overCurrentContext
+        showPaintVC.providesPresentationContextTransitionStyle = true
+        showPaintVC.definesPresentationContext = true
+        showPaintVC.modalTransitionStyle = .crossDissolve
+        showPaintVC.image = friendsAvatar.image
+        showPaintVC.completionHandler = { [weak self] image in
+
+            self?.friendsAvatar.image = image
+
+            self?.activityIndicator.stopAnimating()
+            self?.activityIndicator.isHidden = true
+        }
+        present(showPaintVC, animated: true)
     }
     
     private func showImageMenu() {
@@ -230,15 +225,3 @@ extension ViewController {
     }
     
 }
-
-//extension ViewController {
-//
-//    @objc func handleSwipeGesture(_ gesture: UISwipeGestureRecognizer) {
-//        if gesture.state == .ended {
-//            // Stop the activity indicator
-//            activityIndicator.stopAnimating()
-//            activityIndicator.isHidden = true
-//        }
-//    }
-//
-//}

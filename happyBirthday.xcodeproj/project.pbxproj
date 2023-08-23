@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6F7C550B2A7EDE1800F6E617 /* ImageSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7C550A2A7EDE1800F6E617 /* ImageSettingsViewController.swift */; };
 		6F7C55322A882C8B00F6E617 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7C55312A882C8B00F6E617 /* IntroductionViewController.swift */; };
+		6F83294D2A965C0500F65E83 /* PencilKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F83294C2A965C0500F65E83 /* PencilKitViewController.swift */; };
 		6F89E3072A5DEA1B00693B32 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F89E3062A5DEA1B00693B32 /* NextViewController.swift */; };
 		6FC4F5532A600D620026C60B /* PullUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC4F5522A600D620026C60B /* PullUpViewController.swift */; };
 		6FC4F5552A600EA50026C60B /* BirthdayBoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC4F5542A600EA50026C60B /* BirthdayBoy.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		6F7C550A2A7EDE1800F6E617 /* ImageSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSettingsViewController.swift; sourceTree = "<group>"; };
 		6F7C55312A882C8B00F6E617 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		6F83294C2A965C0500F65E83 /* PencilKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKitViewController.swift; sourceTree = "<group>"; };
 		6F89E3062A5DEA1B00693B32 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		6FC4F5522A600D620026C60B /* PullUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpViewController.swift; sourceTree = "<group>"; };
 		6FC4F5542A600EA50026C60B /* BirthdayBoy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayBoy.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				6F7C55312A882C8B00F6E617 /* IntroductionViewController.swift */,
 				6FD9039F2A5C5F6900094FAA /* ViewController.swift */,
 				6F7C550A2A7EDE1800F6E617 /* ImageSettingsViewController.swift */,
+				6F83294C2A965C0500F65E83 /* PencilKitViewController.swift */,
 				6F89E3062A5DEA1B00693B32 /* NextViewController.swift */,
 				6FC4F5522A600D620026C60B /* PullUpViewController.swift */,
 				6FC4F5562A618AFC0026C60B /* HappyBirthdayViewController.swift */,
@@ -344,6 +347,7 @@
 				6FD9039C2A5C5F6900094FAA /* AppDelegate.swift in Sources */,
 				6FD9039E2A5C5F6900094FAA /* SceneDelegate.swift in Sources */,
 				6FC4F5602A6340FA0026C60B /* Constants.swift in Sources */,
+				6F83294D2A965C0500F65E83 /* PencilKitViewController.swift in Sources */,
 				6FC5121F2A897F5B00CD8EFE /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,7 +517,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = BH26MDT64T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = happyBirthday/Info.plist;
@@ -526,7 +530,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = hayyimsTeam.happyBirthday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -542,7 +546,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = BH26MDT64T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = happyBirthday/Info.plist;
@@ -555,7 +559,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = hayyimsTeam.happyBirthday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
