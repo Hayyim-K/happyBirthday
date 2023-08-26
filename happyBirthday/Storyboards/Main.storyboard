@@ -92,6 +92,7 @@
                                             <attributedString key="attributedTitle">
                                                 <fragment content="About the Authors">
                                                     <attributes>
+                                                        <color key="NSColor" red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="18" name="Helvetica-Bold"/>
                                                         <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                                     </attributes>
@@ -100,7 +101,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="aboutUsButtonHasPressed:" destination="Va4-bs-fCI" eventType="touchUpInside" id="Kci-Dn-AYg"/>
-                                            <segue destination="5or-Tw-mZg" kind="show" identifier="aboutUs" id="ANq-o0-7gi"/>
+                                            <segue destination="5or-Tw-mZg" kind="show" identifier="aboutUs" id="1RG-NF-fu2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uE-0I-87V">
@@ -111,6 +112,7 @@
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Create a Postcard">
                                                     <attributes>
+                                                        <color key="NSColor" red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="18" name="Helvetica-Bold"/>
                                                         <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                                     </attributes>
@@ -119,7 +121,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="start:" destination="Va4-bs-fCI" eventType="touchUpInside" id="YZ6-R5-rDG"/>
-                                            <segue destination="Phc-m4-wr9" kind="show" id="yJu-lC-QQd"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1532,9 +1533,6 @@ Primitive Development</string>
             <point key="canvasLocation" x="-2422" y="772"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="yJu-lC-QQd"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="activeEarsHQ" width="1658" height="750"/>
         <image name="arrow" width="87" height="257"/>

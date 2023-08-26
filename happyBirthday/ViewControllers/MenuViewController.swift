@@ -18,6 +18,11 @@ class MenuViewController: UIViewController {
         greetingsLabel.text = greetings
     }
     
+    private func startCreating() {
+        let firstVC = self.storyboard?.instantiateViewController(withIdentifier: "FirstViewController") as! ViewController
+        present(firstVC, animated: true)
+    }
+    
     
     
     @IBAction func introductionButtonHasPressed(_ sender: Any) {
@@ -27,13 +32,14 @@ class MenuViewController: UIViewController {
     @IBAction func aboutUsButtonHasPressed(_ sender: Any) {
         UISelectionFeedbackGenerator().selectionChanged()
         showParentalGatesAlert(
-            title: "👮‍♂️ Parental Gates 🥸",
-            message: "Choose an authentication method:")
+            title: "👮‍♂️ Parental Gates 🥸\nASK YOUR PARENTS",
+            message: "The content you are trying to access includes internet access via Safari. Choose an authentication method:")
     }
     
     
     @IBAction func start(_ sender: Any) {
         UISelectionFeedbackGenerator().selectionChanged()
+        startCreating()
     }
     
 }
@@ -71,13 +77,19 @@ extension MenuViewController {
                                       preferredStyle: .alert)
         
         alert.addTextField { textField in
-            textField.placeholder = "3,14................46"
+            textField.placeholder = "3.14****************46"
+            textField.keyboardType = .decimalPad
         }
         
         let okAction = UIAlertAction(
             title: "Ok",
             style: .default) { _ in
-                if alert.textFields?.first?.text == "3,14159265358979323846" {
+                let text = alert.textFields?.first?.text
+                if text == "3,14159265358979323846" ||
+                    text == "3.14159265358979323846" ||
+                    text == "14159265358979323846" ||
+                    text == ".14159265358979323846" ||
+                    text == "1592653589793238" {
                     UISelectionFeedbackGenerator().selectionChanged()
                     self.performSegue(withIdentifier: "aboutUs", sender: nil)
                 } else {
@@ -107,7 +119,7 @@ extension MenuViewController {
             style: .default) { _ in
                 self.showAlertWithTextField(
                     title: "👮‍♂️ Parental Gates 🥸",
-                    message: "Input 20 digits of pi after the decimal point"
+                    message: "Enter the first 20 digits of π(pi) after the decimal point"
                 )
             }
         
@@ -125,7 +137,9 @@ extension MenuViewController {
         
         let okAction = UIAlertAction(
             title: "Ok",
-            style: .default)
+            style: .default) { _ in
+                self.startCreating()
+            }
         
         alert.addAction(okAction)
         
