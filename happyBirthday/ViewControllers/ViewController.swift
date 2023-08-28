@@ -78,6 +78,8 @@ class ViewController: UIViewController {
     
     @IBAction func selectPhotoButtonTapped(_ sender: UIButton) {
         UISelectionFeedbackGenerator().selectionChanged()
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
         showImageMenu()
     }
 }
@@ -93,7 +95,6 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
 }
-
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
@@ -189,7 +190,11 @@ extension ViewController {
         alert.addAction(
             UIAlertAction(
                 title: "Cancel",
-                style: .cancel
+                style: .cancel,
+                handler: { _ in
+                    self.activityIndicator.isHidden = true
+                    self.activityIndicator.stopAnimating()
+                }
             )
         )
         alert.addAction(

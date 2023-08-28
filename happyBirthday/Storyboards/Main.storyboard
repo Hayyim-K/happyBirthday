@@ -1286,10 +1286,13 @@ TIMES!!</string>
                                     <constraint firstAttribute="width" constant="204" id="dbh-Oc-y50"/>
                                     <constraint firstAttribute="height" constant="204" id="pck-Ow-9KL"/>
                                 </constraints>
-                                <size key="titleShadowOffset" width="7" height="7"/>
+                                <size key="titleShadowOffset" width="20" height="20"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
                                     <imageReference key="image" image="arrow.uturn.backward" catalog="system" symbolScale="large"/>
+                                    <backgroundConfiguration key="background" strokeWidth="2" strokeOutset="0.0">
+                                        <color key="strokeColor" red="0.004061819932545536" green="0.028481431723425325" blue="0.74047532161389751" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
                                     <color key="baseForegroundColor" systemColor="linkColor"/>
                                     <color key="baseBackgroundColor" red="0.9855991005897522" green="0.014700574800372124" blue="0.043387182056903839" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>

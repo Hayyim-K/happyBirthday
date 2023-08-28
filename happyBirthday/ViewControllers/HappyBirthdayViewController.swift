@@ -28,7 +28,9 @@ class HappyBirthdayViewController: UIViewController {
         face.image = friend.image
         present.text = presents.randomElement()
         finalLabel.text = "HAPPY BIRTHDAY\nDEAR\n\(friend.name)!!"
-        resultLable.text = "I HAVE BEEN WIPING MY PHONE SCREEN ALMOST TO THE HOLES TO PLEASE YOU!!\n\nYOUR \(friend.wellWisher).."
+        resultLable.text = friend.wellWisher.contains(",") ?
+        "WE HAVE BEEN WIPING MY PHONE SCREEN ALMOST TO THE HOLES TO PLEASE YOU!!\n\nYOUR \(friend.wellWisher).." :
+        "I HAVE BEEN WIPING MY PHONE SCREEN ALMOST TO THE HOLES TO PLEASE YOU!!\n\nYOUR \(friend.wellWisher).."
         setTheLogo()
         
     }
