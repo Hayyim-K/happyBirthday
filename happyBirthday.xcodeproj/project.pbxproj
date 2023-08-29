@@ -56,7 +56,7 @@
 		6FC4F55F2A6340FA0026C60B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6FC5121E2A897F5B00CD8EFE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		6FC512202A8987C000CD8EFE /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
-		6FD903982A5C5F6900094FAA /* happyBirthday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = happyBirthday.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FD903982A5C5F6900094FAA /* Ear Pulling Postcard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ear Pulling Postcard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FD9039B2A5C5F6900094FAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FD9039D2A5C5F6900094FAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6FD9039F2A5C5F6900094FAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 		6FD903992A5C5F6900094FAA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6FD903982A5C5F6900094FAA /* happyBirthday.app */,
+				6FD903982A5C5F6900094FAA /* Ear Pulling Postcard.app */,
 				6FD903AE2A5C5F6B00094FAA /* happyBirthdayTests.xctest */,
 				6FD903B82A5C5F6B00094FAA /* happyBirthdayUITests.xctest */,
 			);
@@ -222,7 +222,7 @@
 			);
 			name = happyBirthday;
 			productName = happyBirthday;
-			productReference = 6FD903982A5C5F6900094FAA /* happyBirthday.app */;
+			productReference = 6FD903982A5C5F6900094FAA /* Ear Pulling Postcard.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6FD903AD2A5C5F6B00094FAA /* happyBirthdayTests */ = {
@@ -517,10 +517,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = BH26MDT64T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = happyBirthday/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ear Pulling Postcard";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -530,9 +531,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3;
+				MARKETING_VERSION = 2.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = hayyimsTeam.happyBirthday;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Ear Pulling Postcard";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -546,10 +547,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = BH26MDT64T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = happyBirthday/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ear Pulling Postcard";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -559,9 +561,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3;
+				MARKETING_VERSION = 2.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = hayyimsTeam.happyBirthday;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Ear Pulling Postcard";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
