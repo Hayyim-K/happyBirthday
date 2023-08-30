@@ -12,7 +12,7 @@
         <!--Menu View Controller-->
         <scene sceneID="mxC-hN-ySf">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Va4-bs-fCI" customClass="MenuViewController" customModule="happyBirthday" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Va4-bs-fCI" customClass="MenuViewController" customModule="Ear_Pulling_Postcard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CbN-u7-5as">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,7 +156,7 @@
         <!--Introduction View Controller-->
         <scene sceneID="KQH-hD-wf7">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Bgq-9Y-axk" customClass="IntroductionViewController" customModule="happyBirthday" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Bgq-9Y-axk" customClass="IntroductionViewController" customModule="Ear_Pulling_Postcard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a3p-VZ-vM6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,7 +244,7 @@
         <!--View Controller-->
         <scene sceneID="dve-cG-YZc">
             <objects>
-                <viewController storyboardIdentifier="FirstViewController" modalPresentationStyle="fullScreen" id="Phc-m4-wr9" customClass="ViewController" customModule="happyBirthday" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" modalPresentationStyle="fullScreen" id="Phc-m4-wr9" customClass="ViewController" customModule="Ear_Pulling_Postcard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AjR-DH-p6B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <subviews>
@@ -571,7 +571,7 @@ PHOTO!!</string>
         <!--Image Settings View Controller-->
         <scene sceneID="jgR-OU-pf4">
             <objects>
-                <viewController storyboardIdentifier="ImageSettingsViewController" id="gka-7H-4D1" customClass="ImageSettingsViewController" customModule="happyBirthday" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageSettingsViewController" id="gka-7H-4D1" customClass="ImageSettingsViewController" customModule="Ear_Pulling_Postcard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tfF-gp-IzR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -755,7 +755,7 @@ PHOTO!!</string>
         <!--Pencil Kit View Controller-->
         <scene sceneID="6B9-xZ-UPD">
             <objects>
-                <viewController storyboardIdentifier="PencilKitViewController" id="Rma-rF-QrA" customClass="PencilKitViewController" customModule="happyBirthday" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PencilKitViewController" id="Rma-rF-QrA" customClass="PencilKitViewController" customModule="Ear_Pulling_Postcard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qGb-Ow-hQ7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -828,7 +828,7 @@ PHOTO!!</string>
         <!--Next View Controller-->
         <scene sceneID="us3-Ro-O4b">
             <objects>
-                <viewController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="bgp-iv-gMg" customClass="NextViewController" customModule="happyBirthday" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="bgp-iv-gMg" customClass="NextViewController" customModule="Ear_Pulling_Postcard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z1r-rq-0Tn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1074,7 +1074,7 @@ MARK??</string>
         <!--Pull Up View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="PullUpViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="PullUpViewController" customModule="happyBirthday" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PullUpViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="PullUpViewController" customModule="Ear_Pulling_Postcard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1167,7 +1167,7 @@ TIMES!!</string>
         <!--Happy Birthday View Controller-->
         <scene sceneID="lYn-84-yex">
             <objects>
-                <viewController storyboardIdentifier="HappyBirthdayViewController" modalPresentationStyle="fullScreen" id="ALD-9N-mhW" customClass="HappyBirthdayViewController" customModule="happyBirthday" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HappyBirthdayViewController" modalPresentationStyle="fullScreen" id="ALD-9N-mhW" customClass="HappyBirthdayViewController" customModule="Ear_Pulling_Postcard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uo5-Ww-eUi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1380,7 +1380,7 @@ TIMES!!</string>
         <!--About Us View Controller-->
         <scene sceneID="983-dd-eGN">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="5or-Tw-mZg" customClass="AboutUsViewController" customModule="happyBirthday" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="5or-Tw-mZg" customClass="AboutUsViewController" customModule="Ear_Pulling_Postcard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E5g-pF-XPP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
